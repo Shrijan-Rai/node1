@@ -19,6 +19,31 @@ function addNums(req, res){
 
 app.get('/add', addNums);
 
+
+
+
+function subNums(req, res){
+    const a= req.body.a;
+    const b= req.body.b;
+    const sub = a-b;
+    const name = req.body.name;
+    console.log(name);
+    res.send({
+        "sub" : sub
+    });
+    
+}
+
+app.get('/sub', subNums);
+
+// const port= 3001;
+// const ip = "localhost";
+
+// app.listen(port, ip, function(){
+//     console.log("hello world");
+    
+// });
+
 const port= 3001;
 const ip = "localhost";
 
