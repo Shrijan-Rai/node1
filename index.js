@@ -25,7 +25,7 @@ app.get('/add', addNums);
 function subNums(req, res){
     const a= req.body.a;
     const b= req.body.b;
-    const sub = a-b;
+    const sub = b-a;
     const name = req.body.name;
     console.log(name);
     res.send({
